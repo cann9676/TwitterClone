@@ -1,5 +1,5 @@
 # TwitterClone
-Cloning Twitter to study key Swift concepts.
+Cloning Twitter to study key Swift concepts. Following tutorials from AppStuff.
 
 Concepts include: 
 
