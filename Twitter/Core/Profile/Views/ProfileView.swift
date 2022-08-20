@@ -18,7 +18,13 @@ struct ProfileView: View {
             userInfoDetails
             //User info elements
             
-          
+            HStack {
+            ForEach(TweetFilterViewModel.allCases, id: \.rawValue) { item in
+                VStack {
+                    Text(item.title)
+                }
+            }
+        }
             Spacer()
         //The spacer pushes it to the top
             
