@@ -18,7 +18,7 @@ struct ProfileView: View {
             userInfoDetails
             //User info elements
             
-            .padding(.horizontal)
+          
             Spacer()
         //The spacer pushes it to the top
             
@@ -59,7 +59,7 @@ extension ProfileView {
             
         } //Header
         .frame(height: 96)
-    }
+    } //end of headerView
     
     var actionButton: some View {
         HStack(spacing: 12) {
@@ -82,7 +82,7 @@ extension ProfileView {
             }
             .padding(.trailing)
         }
-    }
+    }  //end of actionButton
     
     var userInfoDetails: some View {
         VStack(alignment: .leading, spacing: 4) {
@@ -140,8 +140,9 @@ extension ProfileView {
             }
             .padding(.vertical)
         }
-
-    }
+        .padding(.horizontal)
+    } // end of userInfoDetails
+        
     
 }
 //Just need one extension and can add multiple variables under it.
