@@ -43,7 +43,6 @@ struct ProfileView: View {
                         Image(systemName: "link")
                         Text("www.thejoker.com")
                     }
-                    
                 }
                 .font(.caption)
                 .foregroundColor(.gray)
