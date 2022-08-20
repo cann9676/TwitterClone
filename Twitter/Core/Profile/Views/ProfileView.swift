@@ -14,43 +14,11 @@ struct ProfileView: View {
             //Using an extension and variable to avoid crowding this section
             
             actionButton
+            //action Button elements
+            userInfoDetails
+            //User info elements
             
-            VStack(alignment: .leading, spacing: 4) {
-                HStack {
-                    Text("Heath Ledger")
-                        .font(.title2).bold()
-                    
-                    Image(systemName: "checkmark.seal.fill")
-                        .foregroundColor(Color(.systemBlue))
-    
-                }
-                
-                Text("@joker")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                
-                Text("Your mom's favorite villain")
-                    .font(.subheadline)
-                    .padding(.vertical)
-                
-                HStack(spacing: 32) {
-                    HStack {
-                        Image(systemName: "mapping.and.ellipse")
-                        Text("Gotham, NY")
-                    }
-                    
-                    HStack {
-                        Image(systemName: "link")
-                        Text("www.thejoker.com")
-                    }
-                    
-                }
-                .font(.caption)
-                .foregroundColor(.gray)
-                //putting the attributes at the bottom affects the the HStack above.
-            }
             .padding(.horizontal)
-            
             Spacer()
         //The spacer pushes it to the top
             
@@ -115,6 +83,66 @@ extension ProfileView {
             .padding(.trailing)
         }
     }
+    
+    var userInfoDetails: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack {
+                Text("Heath Ledger")
+                    .font(.title2).bold()
+                
+                Image(systemName: "checkmark.seal.fill")
+                    .foregroundColor(Color(.systemBlue))
+
+            }
+            
+            Text("@joker")
+                .font(.subheadline)
+                .foregroundColor(.gray)
+            
+            Text("Your mom's favorite villain")
+                .font(.subheadline)
+                .padding(.vertical)
+            
+            HStack(spacing: 24) {
+                HStack {
+                    Image(systemName: "mapping.and.ellipse")
+                    Text("Gotham, NY")
+                }
+                
+                HStack {
+                    Image(systemName: "link")
+                    Text("www.thejoker.com")
+                }
+                
+            } //location and link view
+            .font(.caption)
+            .foregroundColor(.gray)
+            //putting the attributes at the bottom affects the the HStack above.
+            
+            HStack(spacing: 24) {
+                HStack(spacing: 4) {
+                    Text("807")
+                        .font(.subheadline)
+                        .bold()
+                    Text("Following")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                }
+                
+                HStack(spacing: 4) {
+                    Text("6.9M")
+                        .font(.subheadline)
+                        .bold()
+                    Text("Followers")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                }
+            }
+            .padding(.vertical)
+        }
+
+    }
+    
 }
 //Just need one extension and can add multiple variables under it.
 
