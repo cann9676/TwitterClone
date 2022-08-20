@@ -45,7 +45,7 @@ struct ProfileView: View {
                 }
                 .font(.caption)
                 .foregroundColor(.gray)
-                //putting the attributes at the bottom affects the the HStack above.
+                //putting the attributes at the bottom affects the the HStack above
             }
             .padding(.horizontal)
             
