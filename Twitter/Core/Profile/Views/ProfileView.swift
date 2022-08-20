@@ -8,23 +8,22 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State private var selectionFilter: TweetFilterViewModel = .tweets
+    @Namespace var animation
     var body: some View {
         VStack(alignment: .leading) {
             headerView
             //Using an extension and variable to avoid crowding this section
-            
             actionButton
             //action Button elements
             userInfoDetails
             //User info elements
+            tweetFilterBar
+            //Filter Bar elements
+            tweetsView
+            //Tweets
             
-            HStack {
-            ForEach(TweetFilterViewModel.allCases, id: \.rawValue) { item in
-                VStack {
-                    Text(item.title)
-                }
-            }
-        }
+            
             Spacer()
         //The spacer pushes it to the top
             
@@ -148,7 +147,49 @@ extension ProfileView {
         }
         .padding(.horizontal)
     } // end of userInfoDetails
-        
+       
+    var tweetFilterBar: some View {
+        HStack {
+        ForEach(TweetFilterViewModel.allCases, id: \.rawValue) { item in
+            VStack {
+                Text(item.title)
+                    .font(.subheadline)
+                    .fontWeight(selectionFilter == item ? .semibold: .regular)
+                //the selected font weight is bold
+                    .foregroundColor(selectionFilter == item ? .black : .gray)
+                
+                if selectionFilter == item {
+                    Capsule()
+                        .foregroundColor(Color(.systemBlue))
+                        .frame(height: 3)
+                        .matchedGeometryEffect(id: "filter", in: animation)
+                        //matchedGeometryEffect smooths the animation and creates the sliding effect.
+                } else {
+                    Capsule()
+                    .foregroundColor(Color(.clear))
+                    .frame(height: 3)
+            }
+        }
+            .onTapGesture {
+                withAnimation(.easeInOut) {
+                    self.selectionFilter = item
+                    }
+                }
+            }
+        }
+        .overlay(Divider().offset(x: 0, y: 16))
+    } //end of tweetFilterBar
+    
+    var tweetsView: some View {
+        ScrollView {
+            LazyVStack {
+                ForEach(0 ... 9, id: \.self) { _ in
+                    TweetsRowView()
+                        .padding()
+                }
+            }
+        }
+    }// end of tweetsView
     
 }
 //Just need one extension and can add multiple variables under it.
