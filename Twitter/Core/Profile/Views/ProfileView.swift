@@ -9,15 +9,45 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             headerView
             //Using an extension and variable to avoid crowding this section
             
             actionButton
             
-            VStack {
+            VStack(alignment: .leading, spacing: 4) {
+                HStack {
+                    Text("Heath Ledger")
+                        .font(.title2).bold()
+                    
+                    Image(systemName: "checkmark.seal.fill")
+                        .foregroundColor(Color(.systemBlue))
+    
+                }
                 
+                Text("@joker")
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                
+                Text("Your mom's favorite villain")
+                    .font(.subheadline)
+                    .padding(.vertical)
+                
+                HStack {
+                    HStack {
+                        Image(systemName: "mapping.and.ellipse")
+                        Text("Gotham, NY")
+                    }
+                    
+                    HStack {
+                        
+                    }
+                }
+                .font(.caption)
+                .foregroundColor(.gray)
+                //putting the attributes at the bottom affects the the HStack above.
             }
+            .padding(.horizontal)
             
             Spacer()
         //The spacer pushes it to the top
