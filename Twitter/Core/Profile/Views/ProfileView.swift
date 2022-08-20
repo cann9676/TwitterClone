@@ -33,19 +33,21 @@ struct ProfileView: View {
                     .font(.subheadline)
                     .padding(.vertical)
                 
-                HStack {
+                HStack(spacing: 32) {
                     HStack {
                         Image(systemName: "mapping.and.ellipse")
                         Text("Gotham, NY")
                     }
                     
                     HStack {
-                        
+                        Image(systemName: "link")
+                        Text("www.thejoker.com")
                     }
+                    
                 }
                 .font(.caption)
                 .foregroundColor(.gray)
-                //putting the attributes at the bottom affects the the HStack above
+                //putting the attributes at the bottom affects the the HStack above.
             }
             .padding(.horizontal)
             
