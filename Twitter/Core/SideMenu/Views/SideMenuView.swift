@@ -9,7 +9,8 @@ import SwiftUI
 
 struct SideMenuView: View {
     var body: some View {
-        VStack(alignment: .leading) {
+        
+        VStack(alignment: .leading, spacing: 32) {
             VStack(alignment: .leading) {
                 Circle()
                     .frame(width: 48, height: 48)
@@ -28,21 +29,22 @@ struct SideMenuView: View {
                 //made it's own reusable compontent so it can be used in multiple places throughout the app.
                     .padding(.vertical)
             }
-            padding(.leading)
+            .padding(.leading)
             
-            ForEach(SideMenuViewModel.allCases, id: \.rawValue) { option in
-                HStack {
+        ForEach(SideMenuViewModel.allCases, id: \.rawValue) { option in
+                HStack(spacing: 16) {
                     Image(systemName: option.imageName)
                         .font(.headline)
+                        .foregroundColor(.gray)
                     
                     Text(option.title)
+                        .font(.subheadline)
                     
                     Spacer()
                 }
                 .frame(height: 40)
                 .padding(.horizontal)
             }
-           
             Spacer()
         }
     }
