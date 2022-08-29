@@ -22,6 +22,7 @@
 		83CB1D2C28BCA3EB007F5736 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB1D2B28BCA3EB007F5736 /* SideMenuView.swift */; };
 		83CB1D2E28BCA3F9007F5736 /* SideMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB1D2D28BCA3F9007F5736 /* SideMenuRowView.swift */; };
 		83CB1D3028BCA40D007F5736 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB1D2F28BCA40D007F5736 /* SideMenuViewModel.swift */; };
+		83CB1D3228BD027B007F5736 /* UserStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB1D3128BD027B007F5736 /* UserStatsView.swift */; };
 		83F3487428B15C9C00743879 /* TweerFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3487328B15C9C00743879 /* TweerFilterViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		83CB1D2B28BCA3EB007F5736 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		83CB1D2D28BCA3F9007F5736 /* SideMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowView.swift; sourceTree = "<group>"; };
 		83CB1D2F28BCA40D007F5736 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
+		83CB1D3128BD027B007F5736 /* UserStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatsView.swift; sourceTree = "<group>"; };
 		83F3487328B15C9C00743879 /* TweerFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweerFilterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				83CB1D2628BCA028007F5736 /* UserRowView.swift */,
+				83CB1D3128BD027B007F5736 /* UserStatsView.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				83CB1D2728BCA028007F5736 /* UserRowView.swift in Sources */,
 				83F3487428B15C9C00743879 /* TweerFilterViewModel.swift in Sources */,
 				83242B2B28AE93A50015D9D1 /* NotificationsView.swift in Sources */,
+				83CB1D3228BD027B007F5736 /* UserStatsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
