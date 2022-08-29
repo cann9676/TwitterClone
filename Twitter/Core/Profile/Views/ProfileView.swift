@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     @State private var selectionFilter: TweetFilterViewModel = .tweets
+    @Environment(\.presentationMode) var mode
+    //First step to enable back button functionality
     @Namespace var animation
     var body: some View {
         VStack(alignment: .leading) {
@@ -22,8 +24,7 @@ struct ProfileView: View {
             //Filter Bar elements
             tweetsView
             //Tweets
-            
-            
+           
             Spacer()
         //The spacer pushes it to the top
             
@@ -47,7 +48,8 @@ extension ProfileView {
             
             VStack {
                 Button {
-                    
+                    mode.wrappedValue.dismiss()
+                    //enables back button functionality
                 } label: {
                     Image(systemName: "arrow.left")
                         .resizable()
