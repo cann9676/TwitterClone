@@ -10,19 +10,40 @@ import SwiftUI
 struct SideMenuView: View {
     var body: some View {
         VStack(alignment: .leading) {
-            Circle()
-                .frame(width: 48, height: 48)
-            
-            VStack(alignment: .leading, spacing: 4) {
-                Text ("Bruce Wayne")
-                    .font(.headline)
+            VStack(alignment: .leading) {
+                Circle()
+                    .frame(width: 48, height: 48)
                 
-                Text ("@batman")
-                    .font(.caption)
-                    .foregroundColor(.gray)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text ("Bruce Wayne")
+                        .font(.headline)
+                    
+                    Text ("@batman")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                }
+              
+                
+                UserStatsView()
+                //made it's own reusable compontent so it can be used in multiple places throughout the app.
+                    .padding(.vertical)
             }
-            UserStatsView()
-            //made it's own reusable compontent so it can be used in multiple places throughout the app.
+            padding(.leading)
+            
+            ForEach(SideMenuViewModel.allCases, id: \.rawValue) { option in
+                HStack {
+                    Image(systemName: option.imageName)
+                        .font(.headline)
+                    
+                    Text(option.title)
+                    
+                    Spacer()
+                }
+                .frame(height: 40)
+                .padding(.horizontal)
+            }
+           
+            Spacer()
         }
     }
 }
