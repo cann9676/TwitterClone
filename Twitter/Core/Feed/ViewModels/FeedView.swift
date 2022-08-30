@@ -9,11 +9,13 @@ import SwiftUI
 
 struct FeedView: View {
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach (0 ... 20, id: \.self) { _ in
-                   TweetsRowView()
-                        .padding()
+        ZStack(alignment: .bottomTrailing) {
+            ScrollView {
+                LazyVStack {
+                    ForEach (0 ... 20, id: \.self) { _ in
+                       TweetsRowView()
+                            .padding()
+                    }
                 }
             }
         }
