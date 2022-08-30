@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SideMenuView: View {
     var body: some View {
-        
+
         VStack(alignment: .leading, spacing: 32) {
             VStack(alignment: .leading) {
                 Circle()
@@ -23,7 +23,6 @@ struct SideMenuView: View {
                         .font(.caption)
                         .foregroundColor(.gray)
                 }
-              
                 
                 UserStatsView()
                 //made it's own reusable compontent so it can be used in multiple places throughout the app.
@@ -31,20 +30,24 @@ struct SideMenuView: View {
             }
             .padding(.leading)
             
-        ForEach(SideMenuViewModel.allCases, id: \.rawValue) { option in
-                HStack(spacing: 16) {
-                    Image(systemName: option.imageName)
-                        .font(.headline)
-                        .foregroundColor(.gray)
-                    
-                    Text(option.title)
-                        .font(.subheadline)
-                    
-                    Spacer()
+        ForEach(SideMenuViewModel.allCases, id: \.rawValue) { viewModel in
+            if viewModel == .profile {
+                NavigationLink {
+                    ProfileView()
+                } label: {
+                    SideMenuOptionRowView(viewModel: viewModel)
                 }
-                .frame(height: 40)
-                .padding(.horizontal)
+            } else if viewModel == .logout {
+                Button {
+                    print("Handle logout here...")
+                } label: {
+                    SideMenuOptionRowView(viewModel: viewModel)
+                }
+            } else {
+                SideMenuOptionRowView(viewModel: viewModel)
             }
+        }
+        
             Spacer()
         }
     }
