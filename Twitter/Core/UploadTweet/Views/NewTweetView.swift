@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NewTweetView: View {
+    @State private var caption = ""
     var body: some View {
         VStack {
             HStack{
@@ -34,12 +35,13 @@ struct NewTweetView: View {
             }
             .padding()
             
-            HStack {
+            HStack(alignment: .top) {
                 Circle()
                     .frame(width: 64, height: 64)
                 
+                TextArea("What's Happening?", text: $caption)
             }
-            
+            .padding()
         }
     }
 }

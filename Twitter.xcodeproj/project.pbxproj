@@ -176,8 +176,8 @@
 		837EC82828A6158400A3F13F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				8349791728BE8E4600BE049D /* UploadTweet */,
 				837EC82928A6159300A3F13F /* Components */,
+				8349791728BE8E4600BE049D /* UploadTweet */,
 				83CB1D2828BCA3BD007F5736 /* SideMenu */,
 				83242B2728AE8F340015D9D1 /* Profile */,
 				83242B2628AE8EEA0015D9D1 /* Explore */,
