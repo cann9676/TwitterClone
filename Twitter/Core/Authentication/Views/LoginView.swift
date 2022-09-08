@@ -13,7 +13,8 @@ struct LoginView: View {
         VStack {
             //header view
             VStack(alignment: .leading) {
-            //    HStack { Spacer() }
+             HStack { Spacer() }
+                
                 Text("Hello")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
@@ -22,11 +23,15 @@ struct LoginView: View {
                     .font(.largeTitle)
                     .fontWeight(.semibold)
             }
-            .frame(width: UIScreen.main.bounds.width, height: 260)
+            .frame(height: 260)
+            .padding(.leading)
             .background(Color(.systemBlue))
             .foregroundColor(.white)
+            .clipShape(RoundShape(corners: [.bottomRight]))
             
+            Spacer()
         }
+        .ignoresSafeArea()
     }
 }
 
