@@ -28,6 +28,7 @@
 		83CB1D3028BCA40D007F5736 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB1D2F28BCA40D007F5736 /* SideMenuViewModel.swift */; };
 		83CB1D3228BD027B007F5736 /* UserStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB1D3128BD027B007F5736 /* UserStatsView.swift */; };
 		83CB45DA28BFB75F0097162D /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB45D928BFB75F0097162D /* TextArea.swift */; };
+		83DFBFAE28CD42310042E41F /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFBFAD28CD42310042E41F /* CustomInputField.swift */; };
 		83F3487428B15C9C00743879 /* TweerFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3487328B15C9C00743879 /* TweerFilterViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		83CB1D2F28BCA40D007F5736 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 		83CB1D3128BD027B007F5736 /* UserStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatsView.swift; sourceTree = "<group>"; };
 		83CB45D928BFB75F0097162D /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
+		83DFBFAD28CD42310042E41F /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		83F3487328B15C9C00743879 /* TweerFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweerFilterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,6 +230,7 @@
 				833C1B3A28A6C42C00BDB363 /* Tweets */,
 				83CB45D928BFB75F0097162D /* TextArea.swift */,
 				832536D728CA83A300B80CC9 /* RoundShape.swift */,
+				83DFBFAD28CD42310042E41F /* CustomInputField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				83242B3128AE9F4A0015D9D1 /* ProfileView.swift in Sources */,
 				83C1312928A34936000B5324 /* ContentView.swift in Sources */,
 				833C1B3C28A6C46400BDB363 /* TweetsRowView.swift in Sources */,
+				83DFBFAE28CD42310042E41F /* CustomInputField.swift in Sources */,
 				832536D828CA83A300B80CC9 /* RoundShape.swift in Sources */,
 				837EC83028A6173200A3F13F /* FeedView.swift in Sources */,
 				83C1312728A34936000B5324 /* TwitterApp.swift in Sources */,
