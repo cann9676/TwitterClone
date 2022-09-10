@@ -14,22 +14,7 @@ struct LoginView: View {
         //parent container
         VStack {
             //header view
-            VStack(alignment: .leading) {
-             HStack { Spacer() }
-                
-                Text("Hello")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-                
-                Text("Welcome Back")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-            }
-            .frame(height: 260)
-            .padding(.leading)
-            .background(Color(.systemBlue))
-            .foregroundColor(.white)
-            .clipShape(RoundShape(corners: [.bottomRight]))
+           AuthHeaderView(title1: "Hello", title2: "Welcome back.")
             
             VStack(spacing: 40) {
               CustomInputField(imageName: "envelope",

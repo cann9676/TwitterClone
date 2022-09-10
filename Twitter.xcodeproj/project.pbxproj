@@ -29,6 +29,7 @@
 		83CB1D3228BD027B007F5736 /* UserStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB1D3128BD027B007F5736 /* UserStatsView.swift */; };
 		83CB45DA28BFB75F0097162D /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB45D928BFB75F0097162D /* TextArea.swift */; };
 		83DFBFAE28CD42310042E41F /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFBFAD28CD42310042E41F /* CustomInputField.swift */; };
+		83DFBFB128CD450B0042E41F /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFBFB028CD450B0042E41F /* AuthHeaderView.swift */; };
 		83F3487428B15C9C00743879 /* TweerFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3487328B15C9C00743879 /* TweerFilterViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		83CB1D3128BD027B007F5736 /* UserStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatsView.swift; sourceTree = "<group>"; };
 		83CB45D928BFB75F0097162D /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		83DFBFAD28CD42310042E41F /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
+		83DFBFB028CD450B0042E41F /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 		83F3487328B15C9C00743879 /* TweerFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweerFilterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -226,6 +228,7 @@
 		837EC82928A6159300A3F13F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				83DFBFAF28CD44EB0042E41F /* Authentication */,
 				83CB1D2528BCA013007F5736 /* Users */,
 				833C1B3A28A6C42C00BDB363 /* Tweets */,
 				83CB45D928BFB75F0097162D /* TextArea.swift */,
@@ -348,6 +351,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		83DFBFAF28CD44EB0042E41F /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				83DFBFB028CD450B0042E41F /* AuthHeaderView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -434,6 +445,7 @@
 				83CB1D2728BCA028007F5736 /* UserRowView.swift in Sources */,
 				832536D428CA68B400B80CC9 /* LoginView.swift in Sources */,
 				832536D628CA68CB00B80CC9 /* RegistrationView.swift in Sources */,
+				83DFBFB128CD450B0042E41F /* AuthHeaderView.swift in Sources */,
 				8349791B28BE8E8500BE049D /* NewTweetView.swift in Sources */,
 				83A24FB728BE3CED0044B455 /* SideMenuOptionRowView.swift in Sources */,
 				83F3487428B15C9C00743879 /* TweerFilterViewModel.swift in Sources */,
