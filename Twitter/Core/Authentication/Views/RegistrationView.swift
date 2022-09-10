@@ -12,6 +12,7 @@ struct RegistrationView: View {
     @State private var username = ""
     @State private var fullname = ""
     @State private var password = ""
+    @Environment(\.presentationMode) var presenationMode
     var body: some View {
         VStack {
         AuthHeaderView(title1: "Get Started", title2: "Create your account")
@@ -49,6 +50,20 @@ struct RegistrationView: View {
             
             Spacer()
         
+            Button{
+                presenationMode.wrappedValue.dismiss()
+            } label: {
+                HStack  {
+                    Text("Already have an account?")
+                        .font(.footnote)
+                    
+                    Text("Sign In")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                }
+            }
+            .padding(.bottom, 32)
+
         }
         .ignoresSafeArea()
     }
