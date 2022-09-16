@@ -5,4 +5,6 @@ Concepts include:
 
 - Project Organization
 - Tab View
-- H and V Stacks
+- Core Swift UI Principles (Stacks, Custom Shapes, etc.)
+- Creating Multiple Views (User Login, User Profile, Main Feed, etc.)
+- Setting up and utlizing Firebase for an iOS projects
