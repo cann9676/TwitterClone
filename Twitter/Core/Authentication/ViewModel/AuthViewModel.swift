@@ -48,4 +48,11 @@ class AuthViewModel: ObservableObject {
                 }
         }
     }
+    
+    func signOut() {
+        userSession = nil
+        //logs user out locally and resets the view
+        try? Auth.auth().signOut()
+        //logs user out on the server
+    }
 }
